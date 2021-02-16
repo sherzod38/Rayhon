@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap-5.0.0-beta1-dist/css/bootstrap-grid.min.css">
+    <title>RAYHON</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <!-- <title>Шаблон карусели · Bootstrap v5.0</title> -->
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" charset="UTF-8"
+        href="https://translate.googleapis.com/translate_static/css/translateelement.css">
+</head>
+
+<body>
+
+
+    <header class="d-flex align-items-center " style="display: flex; justify-content: space-around; background-color: #503e5a69;">
+        <!-- <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Карусель</font>
+                    </font>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Переключить навигацию">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ss" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Дома</font>
+                                </font>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Связь</font>
+                                </font>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Неполноценный</font>
+                                </font>
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Поиск">
+                        <button class="btn btn-outline-success" type="submit">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Поиск</font>
+                            </font>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav> -->
+        <nav>
+            <ul style="display: flex; justify-content: space-around;  ">
+                <li style="list-style-type: none;"><a style="text-decoration: none;" href="#">
+                    <img style="width: 40px; height: 40px; object-fit: contain;" src="./images/svg_format/telegram.svg" alt="">
+                </a></li>
+                <li style="list-style-type: none;"><a style="text-decoration: none;" href="#">BIZ HAQIMIZDA</a></li>
+                <li style="list-style-type: none;"><a style="text-decoration: none;" href="tel: +998998604405">TEL: +998 99 860 44 05</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div id="myCarousel" style="height: 200px; margin-bottom: 100px;" class=" carousel slide " data-bs-ride="carousel">
+            <!-- <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
+                    aria-label="Слайд 1" aria-current="true"></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Слайд 2"
+                    class=""></button>
+                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Слайд 3"
+                    class=""></button>
+            </div> -->
+            <div class="carousel-inner "  style="height: 200px;">
+                <div class="carousel-item active " style="height: 20px;">
+                    <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"> -->
+                        <!-- <rect width="100%" height="100%" fill="#777"></rect>
+                    </svg> -->
+
+                    <div class="container ">
+                        <div class="da carousel-caption text-start">
+                            <h1>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Пример заголовка.</font>
+                                </font>
+                            </h1>
+                            <!-- <p>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Некоторое репрезентативное
+                                        содержимое-заполнитель для первого слайда карусели.</font>
+                                </font>
+                            </p>
+                            <p><a class="btn btn-lg btn-primary" href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Зарегистрироваться Сегодня</font>
+                                    </font>
+                                </a></p> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="height: 20px;" >
+                    <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"> -->
+                        <!-- <rect width="100%" height="100%" fill="#777"></rect> -->
+                        <!-- </svg> -->
+                        <!-- <img src="./images/istockphoto-1203727577-170667a.jpg" alt=""> -->
+                   
+                    <div class=" container ">
+                        <div class="dd carousel-caption d-flex align-items-end">
+                            
+                           
+                            <!-- <p><a class="btn btn-lg btn-primary" href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Узнать больше</font>
+                                    </font>
+                                </a></p>
+                                <p>
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Некоторый репрезентативный
+                                            контент-заполнитель для второго слайда карусели.</font>
+                                    </font>
+                                </p>    -->
+                                <h1 class="">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Еще один пример заголовка.</font>
+                                    </font>
+                                </h1> 
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" style="height: 20px;">
+                    <!-- <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"> -->
+                        <!-- <rect width="100%" height="100%" fill="#777"></rect>
+                    </svg> -->
+
+                    <div class="container ">
+                        <div class=" ds carousel-caption text-end">
+                            <h1>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Еще один на всякий случай.</font>
+                                </font>
+                            </h1>
+                            <p>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Некоторые репрезентативные
+                                        материалы-заполнители для третьего слайда этой карусели.</font>
+                                </font>
+                            </p>
+                            <p><a class="btn btn-lg btn-primary" href="#">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">Просмотр галереи</font>
+                                    </font>
+                                </a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Предыдущий</font>
+                    </font>
+                </span>
+            </button>
+            <button  class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Следующий</font>
+                    </font>
+                </span>
+            </button>
+        </div>
+
+
+        <!-- Marketing messaging and featurettes
+          ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Заполнитель: 140 x 140"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                            dy=".3em">140x140</text>
+                    </svg>
+
+                    <h2>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Заголовок</font>
+                        </font>
+                    </h2>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Некоторый типичный заполнитель для трех столбцов
+                                текста под каруселью. </font>
+                            <font style="vertical-align: inherit;">Это первая колонка.</font>
+                        </font>
+                    </p>
+                    <p><a class="btn btn-secondary" href="#">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Посмотреть детали "</font>
+                            </font>
+                        </a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Заполнитель: 140 x 140"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                            dy=".3em">140x140</text>
+                    </svg>
+
+                    <h2>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Заголовок</font>
+                        </font>
+                    </h2>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Еще одна интересная часть репрезентативного
+                                содержания заполнителей. </font>
+                            <font style="vertical-align: inherit;">На этот раз мы перешли ко второй колонке.</font>
+                        </font>
+                    </p>
+                    <p><a class="btn btn-secondary" href="#">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Посмотреть детали "</font>
+                            </font>
+                        </a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <svg class="bd-placeholder-img rounded-circle" width="140" height="140"
+                        xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Заполнитель: 140 x 140"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#777"
+                            dy=".3em">140x140</text>
+                    </svg>
+
+                    <h2>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Заголовок</font>
+                        </font>
+                    </h2>
+                    <p>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">И, наконец, это третий столбец репрезентативного
+                                содержимого заполнителя.</font>
+                        </font>
+                    </p>
+                    <p><a class="btn btn-secondary" href="#">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Посмотреть детали "</font>
+                            </font>
+                        </a></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+
+
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette d-flex align-items-center">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Заголовок первой короткометражки. </font>
+                        </font><span class="text-muted">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Это взорвет твой разум.</font>
+                            </font>
+                        </span>
+                    </h2>
+                    <p class="lead">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Здесь есть отличный заполнитель для первой
+                                короткометражки. </font>
+                            <font style="vertical-align: inherit;">Представьте себе какую-нибудь увлекательную прозу.
+                            </font>
+                        </font>
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Заполнитель: 500x500"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
+                            dy=".3em">500x500</text>
+                    </svg>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette d-flex align-items-center">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Ах да, это так хорошо. </font>
+                        </font><span class="text-muted">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Посмотреть на себя.</font>
+                            </font>
+                        </span>
+                    </h2>
+                    <p class="lead">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Еще одна короткометражка? </font>
+                            <font style="vertical-align: inherit;">Конечно. </font>
+                            <font style="vertical-align: inherit;">Здесь больше содержимого заполнителя, чтобы дать вам
+                                представление о том, как этот макет будет работать с некоторым реальным содержанием
+                                реального мира.</font>
+                        </font>
+                    </p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Заполнитель: 500x500"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
+                            dy=".3em">500x500</text>
+                    </svg>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette d-flex align-items-center">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">И, наконец, этот. </font>
+                        </font><span class="text-muted">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Шах и мат.</font>
+                            </font>
+                        </span>
+                    </h2>
+                    <p class="lead">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">И да, это последний блок репрезентативного
+                                содержимого заполнителя. </font>
+                            <font style="vertical-align: inherit;">Опять же, на самом деле не предназначено для чтения,
+                                просто здесь, чтобы дать вам лучшее представление о том, как это будет выглядеть с
+                                некоторым фактическим содержанием. </font>
+                            <font style="vertical-align: inherit;">Ваш контент.</font>
+                        </font>
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Заполнитель: 500x500"
+                        preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#eee"></rect><text x="50%" y="50%" fill="#aaa"
+                            dy=".3em">500x500</text>
+                    </svg>
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+        </div><!-- /.container -->
+
+
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-end"><a href="#">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Вернуться наверх</font>
+                    </font>
+                </a></p>
+            <p>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">© 2017–2021 Company, Inc. · </font>
+                </font><a href="#">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Конфиденциальность</font>
+                    </font>
+                </a>
+                <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;"> · </font>
+                </font><a href="#">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">Условия</font>
+                    </font>
+                </a>
+            </p>
+        </footer>
+    </main>
+
+
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+        <div style="padding: 8px;">
+            <div>
+                <div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png"
+                        width="20" height="20" alt="Google Переводчик"></div>
+            </div>
+        </div>
+        <div class="top" style="padding: 8px; float: left; width: 100%;">
+            <h1 class="title gray">Исходный текст</h1>
+        </div>
+        <div class="middle" style="padding: 8px;">
+            <div class="original-text"></div>
+        </div>
+        <div class="bottom" style="padding: 8px;">
+            <div class="activity-links"><span class="activity-link">Предложить лучший вариант перевода</span><span
+                    class="activity-link"></span></div>
+            <div class="started-activity-container">
+                <hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;">
+                <div class="activity-root"></div>
+            </div>
+        </div>
+        <div class="status-message" style="display: none;"></div>
+    </div>
+
+
+
+
+    <div class="goog-te-spinner-pos">
+        <div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner"
+                width="96px" height="96px" viewBox="0 0 66 66">
+                <circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33"
+                    r="30"></circle>
+            </svg></div>
+    </div>
+
+
+
+    <script src="./bootstrap-5.0.0-beta1-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.0.0-beta1-dist/js/bootstrap.min.js"></script>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>
